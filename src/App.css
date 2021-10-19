@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+/* GENERAL */
+:root{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-size: 1.6rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* navbar */
+
+header > img{
+  width: 100vw;
+  height: 20rem;
+  object-fit: cover;
+}
+
+nav ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+nav li{
+  margin: 0 .5rem;
+  padding: .5rem 1rem;
+  background: #f50;
+  border-radius: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav li:last-of-type{
+  margin-left: auto;
+  background: #fff;
+}
+
+nav img{
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+}
+
+nav p{
+  position: fixed;
+  top: 1.5rem;
+  right: 8rem;
+  color: #ff0;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+nav p:last-of-type{
+  top: 10rem;
+}
+
+/* main */
+
+main{
+  display: flex;
+}
+
+/* sidebar */
+
+aside{
+  height: 100vh;
+  width: 25rem;
+}
+
+aside > select{
+  width: 100%;
+}
+
+.sidebar__sublist li{
+  cursor: pointer;
+  padding: .5rem 1rem;
+  margin: .5rem;
+  color: #aaa;
+  background: #444;
+  border-radius: 1rem;
+}
+
+
+/* lists */
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cartList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* card */
+
+.card{
+  width: 20rem;
+  height: 30rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.card img{
+  width: 100%;
+  height: 50%;
+}
+
+.cardButtons{
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
 }
